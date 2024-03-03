@@ -19,7 +19,7 @@
         </form>
 
 
-      @froeach($data as $product) 
+      @foreach($data as $product) 
 
 
         <div class="col-md-4">

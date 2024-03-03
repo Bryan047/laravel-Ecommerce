@@ -22,12 +22,12 @@
 
         @if(session()->has('message'))
 
-    <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">x</button>
-        {{session()->get('message')}}
-    </div>
+            <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+         {{session()->get('message')}}
+            </div>
 
-      @endif
+        @endif
 
 
 
@@ -60,7 +60,7 @@
             </td>
 
             <td>
-                <a class="btn btn-danger" href="{{url('deleteprodct',$product->id)}}">Delete</a>
+                <a class="btn btn-danger" href="{{url('deleteproduct',$product->id)}}">Delete</a>
             </td>
 
             </tr>

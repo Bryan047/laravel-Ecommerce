@@ -31,7 +31,7 @@
         <!-- partial -->
         <div class="container" align="center">
       <h1 class="title">Add Product</h1>
-      
+
       @if(session()->has('message'))
 
     <div class="alert alert-success">
@@ -48,14 +48,14 @@
       <div style="padding: 15px;">
         <label >Product title</label>
 
-        <input style="color:black;" type="text" name="price" placeholder="Give a product price" require="">
+        <input style="color:black;" type="text" name="title" placeholder="Give a product title" require="">
       </div>
 
         
       <div style="padding: 15px;">
         <label >Price</label>
 
-        <input style="color:black;" type="number" name="title" placeholder="Give a product title" require="">
+        <input style="color:black;" type="number" name="price" placeholder="Give a product price" require="">
       </div>
 
         

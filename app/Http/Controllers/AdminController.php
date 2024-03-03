@@ -44,12 +44,14 @@ class AdminController extends Controller
     public function deleteproduct($id)
     {
 
-        $data=product::find($id);
+        $data = product::find($id);
 
-        $data->delete();
-
-        return redireact()->back()->with('message','Product Delete');
-
+        if($data) {
+            $data->delete();
+            return redirect()->back()->with('message', 'Product Deleted');
+        } else {
+            return redirect()->back()->with('error', 'Product not found');
+        }
     }
 
     public function updateview($id)
@@ -62,7 +64,7 @@ class AdminController extends Controller
     public function updateproduct(Request $request, $id)
     {
 
-        $data=product::fide($id);
+        $data=product::find($id);
 
         $image = $request->file;
         if($image)
@@ -73,7 +75,7 @@ class AdminController extends Controller
 
         $data->image=$imagename;
         }
-        
+
         $data->title=$request->title;
         $data->price=$request->price;
         $data->description=$request->des;
