@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,3 +29,18 @@ Route::middleware([
 
 Route::get('/redirect',[Homecontroller::class,'redirect']);
 Route::get('/',[Homecontroller::class,'index']);
+Route::get('/product',[AdminController::class,'product']);
+
+
+Route::post('/uploadproduct',[AdminController::class,'uploadproduct']);
+
+
+Route::get('/showproduct',[AdminController::class,'showproduct']);
+
+Route::get('/deleteproduct/{id}',[AdminController::class,'deleteproduct']);
+
+Route::get('/updateview/{id}',[AdminController::class,'updateview']);
+
+Route::post('/updateproduct/{id}',[AdminController::class,'updateproduct']);
+
+Route::get('/search',[HomeController::class,'search']);

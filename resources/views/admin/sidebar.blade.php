@@ -84,7 +84,28 @@
             <span class="menu-title">Dashboard</span>
           </a>
         </li>
+
         <li class="nav-item menu-items">
+          <a href="{{url('product')}}" class="nav-link">
+            <span class="menu-icon">
+              <i class="mdi-file-document-box"></i>
+            </span>
+            <span class="menu-title">Add New Products</span>
+          </a>
+        </li>
+
+
+        <li class="nav-item menu-items">
+          <a href="{{url('showproduct')}}" class="nav-link">
+            <span class="menu-icon">
+              <i class="mdi-file-document-box"></i>
+            </span>
+            <span class="menu-title">Show all Products</span>
+          </a>
+        </li>
+
+
+        <!-- <li class="nav-item menu-items">
           <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
             <span class="menu-icon">
               <i class="mdi mdi-laptop"></i>
@@ -157,6 +178,6 @@
             </span>
             <span class="menu-title">Documentation</span>
           </a>
-        </li>
+        </li> -->
       </ul>
     </nav>

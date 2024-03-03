@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\User;
 
+use App\Models\Product;
+
 class Homecontroller extends Controller
 {
     public function redirect()
@@ -20,7 +22,8 @@ class Homecontroller extends Controller
 
         else
         {
-            return view('user.home');
+            $data = product::paginate(3);
+            return view('user.home',compact('data'));
         }
     }
 
@@ -32,8 +35,26 @@ class Homecontroller extends Controller
         }
         else
         {
-            return view('user.home');    
+
+            $data = product::paginate(3);
+            return view('user.home',compact('data'));    
         }
         
+    }
+    public function search(Request $request)
+    {
+        $search=$request->search;
+
+        if($search=='')
+        {
+
+            $data = product::paginate(3);
+            return view('user.home',compact('data'));
+
+        }
+
+        $data=product::where('title','Like','%'.$search.'%')->get();
+
+        return view('user.home',compact('data'));
     }
 }

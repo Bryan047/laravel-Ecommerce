@@ -7,25 +7,38 @@
             <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
           </div>
         </div>
+
+
+        <form action="{{url(search)}}" method="get" class="form-inline" style="float: right; padding: 10px;">
+
+        @csrf
+
+
+          <input class="form-control" type="search" name="search" placeholder="search">
+          <input type="submit" value="Seacrh" class="btn btn-success"> 
+        </form>
+
+
+      @froeach($data as $product) 
+
+
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="assets/images/product_01.jpg" alt=""></a>
+            <a href="#"><img height="300" width="150" src="assets/images/{{$product->image}}" alt=""></a>
             <div class="down-content">
-              <a href="#"><h4>Tittle goes here</h4></a>
-              <h6>$25.75</h6>
-              <p>Lorem ipsume dolor sit amet, adipisicing elite. Itaque, corporis nulla aspernatur.</p>
-              <ul class="stars">
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-                <li><i class="fa fa-star"></i></li>
-              </ul>
-              <span>Reviews (24)</span>
+              <a href="#"><h4>{{$product->title}}</h4></a>
+              <h6>{{$product->price}}</h6>
+              <p>{{$product->description}}</p>
+
+             <a class="btn btn-primay" href="#">Add Product</a>
+              
             </div>
           </div>
         </div>
-        <div class="col-md-4">
+
+
+
+        <!-- <div class="col-md-4">
           <div class="product-item">
             <a href="#"><img src="assets/images/product_02.jpg" alt=""></a>
             <div class="down-content">
@@ -114,7 +127,21 @@
               <span>Reviews (32)</span>
             </div>
           </div>
-        </div>
+        </div> -->
+
+      @endforeach
+
+      @if(method_exists($data,'links'))
+
+      <div class="d-flex fustify-content-center">
+
+        {!! $data->links()  !!}
+
+
+      </div>
+
+      @endif
+
       </div>
     </div>
   </div>
