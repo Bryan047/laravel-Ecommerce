@@ -44,19 +44,19 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+        <a class="navbar-brand" href="index.html"><h2>แก่นจันทร์ <em>หมูกระทะ</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
+                <a class="nav-link" href="index.html">หน้าหลัก
+                  <span class="sr-only">(current)</span> 
                 </a>
               </li> 
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Our Products</a>
+                <a class="nav-link" href="products.html">เมนูอื่นๆ</a>
               </li>
               
 
@@ -92,20 +92,20 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
           <div class="text-content">
-            <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
+          <h4>ร้านยอดนิยม</h4>
+            <h2>ต้องแก่นจันทร์เนื้อย่าง</h2>
           </div>
         </div>
         <div class="banner-item-02">
           <div class="text-content">
-            <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
+            <h4>สะอาด</h4>
+            <h2>ใส่ใจทุกรายละเอียกเพืดภัยของผู้บริโภค</h2>
           </div>
         </div>
         <div class="banner-item-03">
           <div class="text-content">
-            <h4>Last Minute</h4>
-            <h2>Grab last minute deals</h2>
+            <h4>โปรโมชันทุกวันพุธ</h4>
+            <h2>ซื้อ 2 แถม 1 </h2>
           </div>
         </div>
       </div>
