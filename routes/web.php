@@ -28,7 +28,7 @@ Route::middleware([
 });
 
 Route::get('/redirect',[Homecontroller::class,'redirect']);
-Route::get('/',[Homecontroller::class,'index']);
+Route::get('/',[Homecontroller::class,'redirect']);
 Route::get('/product',[AdminController::class,'product']);
 
 

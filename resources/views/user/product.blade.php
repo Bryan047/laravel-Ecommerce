@@ -9,14 +9,7 @@
         </div>
 
 
-        <form action="{{url(search)}}" method="get" class="form-inline" style="float: right; padding: 10px;">
-
-        @csrf
-
-
-          <input class="form-control" type="search" name="search" placeholder="search">
-          <input type="submit" value="Seacrh" class="btn btn-success"> 
-        </form>
+      
 
 
       @foreach($data as $product) 
@@ -24,7 +17,7 @@
 
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img height="300" width="150" src="assets/images/{{$product->image}}" alt=""></a>
+            <a href="#"><img height="300" width="150" src="/productimage/{{$product->image}}" alt=""></a>
             <div class="down-content">
               <a href="#"><h4>{{$product->title}}</h4></a>
               <h6>{{$product->price}}</h6>
